@@ -10,8 +10,8 @@ Route::get('contact-us', function () {
 });
 
 Route::view('about-us','about');
-Route::view('/','welcome');
-Route::view('/','welcome');
+Route::view('/','home');
+Route::view('/welcome','welcome');
 
 Route::get('customers', function () {
 
@@ -21,6 +21,9 @@ Route::get('customers', function () {
         'customers'=> $custom  
     ]);
 });
+
+
+Route::get('my-customers','CustomersController@list');
 
 
 

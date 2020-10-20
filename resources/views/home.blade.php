@@ -1,10 +1,6 @@
 @extends('layout')
 
 @section('content')
-
-
-<h1>about us </h1>
-
-<p>OESB </p>
-
+<h1>welcome laravel 5 </h1>
+ 
 @endsection

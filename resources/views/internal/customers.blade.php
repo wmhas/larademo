@@ -1,16 +1,21 @@
-<h1> Customers </h1>
 
-<ul> 
+@extends('layout')
 
-    <li> customer 1 </li>
-    <li> customer 2 </li>
-    <li> customer 3 </li>
-
+@section('content')
     
+
+    <h1> Customers </h1>
+
+    <ul> 
+
+        <li> customer 1 </li>
+        <li> customer 2 </li>
+        <li> customer 3 </li>
 
         @foreach ($customers as $item)
 
-             <li> {{ $item}} </li>
+            <li> {{ $item}} </li>
 
         @endforeach
-</ul>
+    </ul>
+@endsection
