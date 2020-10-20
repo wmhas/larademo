@@ -25,5 +25,7 @@ Route::get('customers', function () {
 
 Route::get('my-customers','CustomersController@list');
 
+Route::post('my-customers','CustomersController@store');
+
 
 

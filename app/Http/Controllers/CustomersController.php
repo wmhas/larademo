@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Customer;
 use Illuminate\Http\Request;
 
 class CustomersController extends Controller
@@ -12,10 +13,24 @@ class CustomersController extends Controller
 
         $custom = ['wan', 'hani', 'zalia'];
 
-        //return view('contact');
+        $customers = Customer::all();
+
+        //dd($customers);
+
 
        return view('internal.customers', [
-            'customers'=> $custom  
+            'customers'=> $customers  
         ]);
     } 
+
+    public function store() {
+        
+        //dd(request('custname'));
+
+        $customer = new Customer();
+        $customer->name=request('custname');
+        $customer->save();
+
+        return back();
+    }
 }
